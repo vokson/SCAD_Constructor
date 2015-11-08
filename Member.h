@@ -15,13 +15,13 @@ public:
 	int pin2; /* Шарнир во втором узле */
 
 	/* Default constructor*/
-	Member(int id, int node1, int node2, int pin1, int pin2,  int betaAngle, std::string section, std::string name) {
+	Member(int id, std::string name, int node1, int node2, int pin1, int pin2,  int betaAngle, std::string section) {
 		this->id = id;
 
 		this->node1 = node1;
-		this->pin1 = pin1;
-
 		this->node2 = node2;
+
+		this->pin1 = pin1;
 		this->pin2 = pin2;
 
 		this->betaAngle = betaAngle;

@@ -1,5 +1,7 @@
 #pragma once
 #include <vector>
+#include <iostream>
+#include <string>
 #include "Node.h"
 #include "Member.h"
 #include "API/Include/ScadAPIX.hxx"
@@ -50,8 +52,12 @@ public:
 			ApiSetRigidElem(handle, section, 2, elementArray);
 
 			// Pins
-	        ApiSetJoint(handle, this->members[i].pin1, this->members[i].id, this->members[i].node1, 0);
-			ApiSetJoint(handle, this->members[i].pin2, this->members[i].id, this->members[i].node2, 0);
+			if (this->members[i].pin1 > 0) {
+				ApiSetJoint(handle, this->members[i].pin1, this->members[i].id, 1, 0);
+			}
+			if (this->members[i].pin2 > 0) {
+				ApiSetJoint(handle, this->members[i].pin2, this->members[i].id, 2, 0);
+			}
 
 			// Angle
 			angleArray[0] = members[i].betaAngle;

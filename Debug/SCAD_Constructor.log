@@ -1,21 +1,22 @@
-﻿Сборка начата 27.10.2015 5:24:48.
+﻿Сборка начата 08.11.2015 21:36:29.
      1>Проект "D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\SCAD_Constructor.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         D:\Microsoft Visual Studio 9.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\SCAD_Constructor.pch" /Fo"Debug\\" /Fd"Debug\vc90.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-         D:\Microsoft Visual Studio 9.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\SCAD_Constructor.pch" /Fo"Debug\\" /Fd"Debug\vc90.pdb" /Gd /TP /analyze- /errorReport:prompt SCAD_Constructor.cpp
+         D:\Microsoft Visual Studio 9.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\SCAD_Constructor.pch" /Fo"Debug\\" /Fd"Debug\vc90.pdb" /Gd /TP /analyze- /errorReport:prompt Model.cpp SCAD_Constructor.cpp
          SCAD_Constructor.cpp
-       ResourceCompile:
-         C:\Program Files\Microsoft SDKs\Windows\v6.0A\bin\rc.exe /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0409" /fo"Debug\SCAD_Constructor.res" SCAD_Constructor.rc 
-         Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
-         
-         Copyright (C) Microsoft Corporation.  All rights reserved.
-         
-         
-     1>RC : fatal error RC1109: error creating Debug\SCAD_Constructor.res
-         
-     1>Сборка проекта "D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\SCAD_Constructor.vcxproj" завершена (целевые объекты Build) с ошибкой.
+         Model.cpp
+         Generating Code...
+       Link:
+         D:\Microsoft Visual Studio 9.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\Debug\SCAD_Constructor.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\SCAD_Constructor.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\Debug\SCAD_Constructor.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\Debug\SCAD_Constructor.lib" /MACHINE:X86 Debug\SCAD_Constructor.res
+         Debug\SCAD_Constructor.exe.embed.manifest.res
+         Debug\Model.obj
+         Debug\SCAD_Constructor.obj
+         Debug\stdafx.obj
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v6.0A\bin\mt.exe /nologo /verbose /out:"Debug\SCAD_Constructor.exe.embed.manifest" /manifest Debug\SCAD_Constructor.exe.intermediate.manifest
+       LinkEmbedManifest:
+         SCAD_Constructor.vcxproj -> D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\Debug\SCAD_Constructor.exe
+     1>Сборка проекта "D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\SCAD_Constructor.vcxproj" завершена (целевые объекты Build).
 
-Ошибка сборки.
+Сборка успешно завершена.
 
-Затраченное время: 00:00:02.87
+Затраченное время: 00:00:01.31
