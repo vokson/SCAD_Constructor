@@ -6,7 +6,7 @@ public:
 	int id; /* Номер элемента */
 	int node1; /* Номер первого узла */
 	int node2; /* Номер второго узла */
-	int betaAngle; /* Угол поворота элемента */
+	double betaAngle; /* Угол поворота элемента */
 
 	std::string name; /* Имя элемента */
 	std::string section; /* Жесткость */

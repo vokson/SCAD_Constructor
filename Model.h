@@ -34,6 +34,7 @@ public:
 		// Update members
 		u_int nodeArray[2];
 		u_int elementArray[1];
+		double angleArray[1];
 
 		for (u_int i = 0; i < this->members.size(); i++) {
 			nodeArray[0] = this->members[i].node1;
@@ -48,9 +49,13 @@ public:
 			elementArray[0] = this->members[i].id;
 			ApiSetRigidElem(handle, section, 2, elementArray);
 
-			// Pin1
+			// Pins
 	        ApiSetJoint(handle, this->members[i].pin1, this->members[i].id, this->members[i].node1, 0);
 			ApiSetJoint(handle, this->members[i].pin2, this->members[i].id, this->members[i].node2, 0);
+
+			// Angle
+			angleArray[0] = members[i].betaAngle;
+			ApiSetSystemCoordElem(handle, ApiGroupRod, ApiRodCornerInDegrees, 1, angleArray, 1, elementArray);
 		}
 
 		
