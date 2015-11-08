@@ -1,0 +1,21 @@
+﻿Сборка начата 27.10.2015 5:24:48.
+     1>Проект "D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\SCAD_Constructor.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         D:\Microsoft Visual Studio 9.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\SCAD_Constructor.pch" /Fo"Debug\\" /Fd"Debug\vc90.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         D:\Microsoft Visual Studio 9.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\SCAD_Constructor.pch" /Fo"Debug\\" /Fd"Debug\vc90.pdb" /Gd /TP /analyze- /errorReport:prompt SCAD_Constructor.cpp
+         SCAD_Constructor.cpp
+       ResourceCompile:
+         C:\Program Files\Microsoft SDKs\Windows\v6.0A\bin\rc.exe /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0409" /fo"Debug\SCAD_Constructor.res" SCAD_Constructor.rc 
+         Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+         
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+         
+     1>RC : fatal error RC1109: error creating Debug\SCAD_Constructor.res
+         
+     1>Сборка проекта "D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\SCAD_Constructor.vcxproj" завершена (целевые объекты Build) с ошибкой.
+
+Ошибка сборки.
+
+Затраченное время: 00:00:02.87
