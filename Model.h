@@ -4,6 +4,7 @@
 #include <string>
 #include "Node.h"
 #include "Member.h"
+#include "Restraint.h"
 #include "API/Include/ScadAPIX.hxx"
 
 
@@ -15,6 +16,9 @@ public:
 	/*Collection of members*/
 	std::vector<Member> members;
 
+	/*Collection of restraints*/
+	std::vector<Restraint> restraints;
+
 	// Default constructor
 	Model();
 
@@ -25,6 +29,19 @@ public:
 		for (u_int i = 0; i < this->nodes.size(); i++) {
 			ApiNodeUpdate(handle, this->nodes[i].id, this->nodes[i].x, this->nodes[i].y, this->nodes[i].z);
 			ApiNodeSetName(handle, this->nodes[i].id, this->nodes[i].name.c_str());
+		}
+	}
+
+	// Creates restraint
+	void createRestraints(ScadAPI&	handle) {
+		
+		// связи	
+		u_int nodeArray[1];
+
+		for (u_int i = 0; i < this->restraints.size(); i++) {
+
+			nodeArray[0] = this->restraints[i].id;
+			ApiSetBound(handle,this->restraints[i].fix, 1, nodeArray, TRUE);
 		}
 	}
 

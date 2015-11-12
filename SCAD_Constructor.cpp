@@ -26,6 +26,9 @@ void _tmain()
 	// Elements
 	model.createMembers(handle);
 
+	// Restraints
+	model.createRestraints(handle);
+
 	/*
 	// Ёлементы
 	ApiElemAdd(handle, 21);
