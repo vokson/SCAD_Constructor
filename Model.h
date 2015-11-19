@@ -52,6 +52,7 @@ public:
 	// Creates load cases
 	void createLoadCases(ScadAPI& handle) {
 
+		//int massArraySize = 0;
 		for (u_int i = 0; i < this->loadCases.size(); i++) {
             std::cout << "I = " << i << std::endl;
 
@@ -61,11 +62,11 @@ public:
 			ApiSetLoadName(handle, this->loadCases[i].id, this->loadCases[i].name.c_str());
 
 			// MASSES
-			int massArraySize = this->loadCases[i].masses.size();
+			//massArraySize = this->loadCases[i].masses.size();
 			
-			if ( massArraySize > 0) {
-				std::cout << "massArraySize = " << massArraySize << std::endl;
-				ApiSetLoadMass(handle, this->loadCases[i].id, massArraySize, &this->loadCases[i].masses[0]);
+			if ( this->loadCases[i].massCount > 0) {
+				std::cout << "massArraySize = " << this->loadCases[i].massCount << std::endl;
+				ApiSetLoadMass(handle, this->loadCases[i].id, this->loadCases[i].massCount, &this->loadCases[i].masses[0]);
 			}
 		}
 	}
