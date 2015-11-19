@@ -153,6 +153,7 @@
     <ClInclude Include="API\Include\ScadApiSchema.hxx" />
     <ClInclude Include="API\Include\SCADAPIX.hxx" />
     <ClInclude Include="API\Include\ScadStructHelpAPI.hxx" />
+    <ClInclude Include="LoadCase.h" />
     <ClInclude Include="Member.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="Node.h" />

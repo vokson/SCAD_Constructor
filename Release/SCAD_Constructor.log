@@ -1,4 +1,4 @@
-﻿Сборка начата 12.11.2015 9:14:49.
+﻿Сборка начата 19.11.2015 11:43:46.
      1>Проект "D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\SCAD_Constructor.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
          D:\Microsoft Visual Studio 9.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\SCAD_Constructor.pch" /Fo"Release\\" /Fd"Release\vc90.pdb" /Gd /TP /analyze- /errorReport:prompt Model.cpp SCAD_Constructor.cpp
@@ -18,4 +18,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:01.22
+Затраченное время: 00:00:01.43

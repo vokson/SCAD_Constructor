@@ -5,6 +5,7 @@
 #include "Node.h"
 #include "Member.h"
 #include "Restraint.h"
+#include "LoadCase.h"
 #include "API/Include/ScadAPIX.hxx"
 
 
@@ -19,11 +20,14 @@ public:
 	/*Collection of restraints*/
 	std::vector<Restraint> restraints;
 
+	/*Collection of load cases*/
+	std::vector<LoadCase> loadCases;
+
 	// Default constructor
 	Model();
 
 	// Creates nodes
-	void createNodes(ScadAPI&	handle) {
+	void createNodes(ScadAPI& handle) {
 		// узлы
 		ApiNodeAddSize(handle, this->nodes.size());
 		for (u_int i = 0; i < this->nodes.size(); i++) {
@@ -45,8 +49,29 @@ public:
 		}
 	}
 
+	// Creates load cases
+	void createLoadCases(ScadAPI& handle) {
+
+		for (u_int i = 0; i < this->loadCases.size(); i++) {
+            std::cout << "I = " << i << std::endl;
+
+			// TYPE
+			ApiSetLoadDescription(handle, this->loadCases[i].id, this->loadCases[i].type.c_str());
+			// NAME
+			ApiSetLoadName(handle, this->loadCases[i].id, this->loadCases[i].name.c_str());
+
+			// MASSES
+			int massArraySize = this->loadCases[i].masses.size();
+			
+			if ( massArraySize > 0) {
+				std::cout << "massArraySize = " << massArraySize << std::endl;
+				ApiSetLoadMass(handle, this->loadCases[i].id, massArraySize, &this->loadCases[i].masses[0]);
+			}
+		}
+	}
+
 	// Creates members
-	void createMembers(ScadAPI&	handle) {
+	void createMembers(ScadAPI& handle) {
 		// Add count of members
 		ApiElemAdd(handle, this->members.size());
 

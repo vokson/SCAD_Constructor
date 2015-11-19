@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "Model.h"
+#include <vector>
+
 Model::Model() {
 // +++ NODES +++
 this->nodes.push_back(Node(1, "", 0, 3, 0));
@@ -27,4 +29,24 @@ this->members.push_back(Member(10, "B1", 8, 6, 0, 16, 0, "STZ RUSSIAN p_norm_b 1
 this->restraints.push_back(Restraint(1, 63));
 this->restraints.push_back(Restraint(3, 7));
 this->restraints.push_back(Restraint(5, 63));
+// 
+this->loadCases.push_back(LoadCase(1, "One", "Type=0  Mode=1  LongTime=1  ReliabilityFactor=1.05"));
+this->loadCases.push_back(LoadCase(2, "Two", "Type=0  Mode=1  LongTime=1  ReliabilityFactor=1.05"));
+
+std::vector<double> massVector;
+
+massVector.clear();
+massVector.swap(std::vector<double>(massVector));
+
+massVector.push_back(0);
+massVector.push_back(1.2);
+massVector.push_back(1.5);
+this->loadCases.push_back(LoadCase(3, "Wind_X", "Type=2  ReliabilityFactor=1.1  21 5 1  1 3 0 0 0 5 18 1 0 0.3 1", massVector));
+
+massVector.clear();
+//massVector.swap(std::vector<double>(massVector));
+massVector.push_back(0);
+massVector.push_back(0.9);
+this->loadCases.push_back(LoadCase(4, "Wind_Y", "Type=2  ReliabilityFactor=1.1  21 5 1  1 3 0 0 0 5 18 1 0 0.3 1", massVector));
+
 };

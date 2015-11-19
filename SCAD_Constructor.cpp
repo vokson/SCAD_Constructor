@@ -17,6 +17,8 @@ void _tmain()
 	ApiSetUnits(handle, Un);
 	if (ApiSetTypeSchema(handle, 5) != APICode_OK) ApiMsg("Error");
 
+	
+
 	//Prepare Model
 	Model model = Model();
 	
@@ -29,7 +31,37 @@ void _tmain()
 	// Restraints
 	model.createRestraints(handle);
 
+	// Load cases
+	model.createLoadCases(handle);
+
+	/*UINT Elem[] = { 4 };
+	double Size[] = {30, 1, 40, 2};
+	 //Add load
+	ApiAppendForce(handle, 1, 17, SgForceZ, 4, Size, 1, Elem);*/
+
+
 	/*
+	ScadAPI	handle(NULL);
+	UINT n, i, j, Node[4], Elem[4];
+	double Size[6];
+	const static UnitsAPI Un[3] = { { "m", 1 },  { "cm", 100 }, { "T", 1 } };
+
+	if ( ApiCreate(&handle) != APICode_OK ) ApiMsg("Error");  //  создание объекта API и контроль
+	if ( ApiClear(handle) != APICode_OK ) ApiMsg("Error");    //  после открыти€ можно не делать
+	if ( ApiSetLanguage (handle,1) != APICode_OK ) ApiMsg("Error");
+	ApiSetName(handle,"TestNewProject");
+	ApiSetUnits(handle,Un);
+	if ( ApiSetTypeSchema(handle,5) != APICode_OK ) ApiMsg("Error");
+
+	// узлы
+	ApiNodeAddSize(handle,16);
+	for ( i=0,n=0; i<4; i++ ) {
+	for ( j=0; j<4; j++ ) {
+	ApiNodeUpdate(handle,++n,i*6,0,j*3);
+	}
+	}
+	ApiNodeSetName(handle,16,"Node 16");
+
 	// Ёлементы
 	ApiElemAdd(handle, 21);
 	for (i = 0; i<4; i++) {
