@@ -17,8 +17,6 @@ void _tmain()
 	ApiSetUnits(handle, Un);
 	if (ApiSetTypeSchema(handle, 5) != APICode_OK) ApiMsg("Error");
 
-	
-
 	//Prepare Model
 	Model model = Model();
 	
@@ -34,37 +32,9 @@ void _tmain()
 	// Load cases
 	model.createLoadCases(handle);
 
-	/*ApiSetLoadDescription(handle, 1, "Type=2  ReliabilityFactor=1.1  21 5 1  1 3 0 0 0 5 18 1 0 0.3 1");
-	ApiSetLoadName(handle, 1, "Dyn");
-	ApiSetLoadDescription(handle, 2, "Type=0  Mode=1  LongTime=1  ReliabilityFactor=1.05");
-	ApiSetLoadName(handle, 2, "One");
-	ApiSetLoadDescription(handle, 3, "Type=0  Mode=1  LongTime=1  ReliabilityFactor=1.05");
-	ApiSetLoadName(handle, 3, "Two");
-	ApiSetLoadDescription(handle, 4, "Type=2  ReliabilityFactor=1.1  21 5 1  1 3 0 0 0 5 18 1 0 0.3 1");
-	ApiSetLoadName(handle, 4, "Wind_X");
-	ApiSetLoadDescription(handle, 5, "Type=2  ReliabilityFactor=1.1  21 5 1  1 3 0 0 0 5 18 1 0 0.3 1");
-	ApiSetLoadName(handle, 5, "Wind_Y");*/
+	// Load cases
+	model.createLoads(handle);
 
-	//std::vector<double> massVector1;
-	//std::vector<double> massVector2;
-
-	//massVector.clear();
-	//massVector.swap(std::vector<double>(massVector));
-
-	/*massVector1.push_back(0);
-	massVector1.push_back(0);
-	massVector1.push_back(1.2);
-	massVector1.push_back(1.5);
-
-	ApiSetLoadMass(handle, 4, 3, &massVector1[0]);
-
-	massVector1.clear();
-	massVector1.swap(std::vector<double>(massVector1));
-	massVector1.push_back(0);
-	massVector1.push_back(0);
-	massVector1.push_back(0.9);*/
-
-	//ApiSetLoadMass(handle, 5, 2, &massVector1[0]);
 
 	/*UINT Elem[] = { 4 };
 	double Size[] = {30, 1, 40, 2};

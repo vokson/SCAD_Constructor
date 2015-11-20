@@ -6,6 +6,7 @@
 #include "Member.h"
 #include "Restraint.h"
 #include "LoadCase.h"
+#include "Load.h"
 #include "API/Include/ScadAPIX.hxx"
 
 
@@ -22,6 +23,9 @@ public:
 
 	/*Collection of load cases*/
 	std::vector<LoadCase> loadCases;
+
+	/*Collection of loads*/
+	std::vector<Load> loads;
 
 	// Default constructor
 	Model();
@@ -52,22 +56,30 @@ public:
 	// Creates load cases
 	void createLoadCases(ScadAPI& handle) {
 
-		//int massArraySize = 0;
 		for (u_int i = 0; i < this->loadCases.size(); i++) {
-            std::cout << "I = " << i << std::endl;
-
 			// TYPE
 			ApiSetLoadDescription(handle, this->loadCases[i].id, this->loadCases[i].type.c_str());
 			// NAME
 			ApiSetLoadName(handle, this->loadCases[i].id, this->loadCases[i].name.c_str());
 
-			// MASSES
-			//massArraySize = this->loadCases[i].masses.size();
-			
 			if ( this->loadCases[i].massCount > 0) {
-				std::cout << "massArraySize = " << this->loadCases[i].massCount << std::endl;
 				ApiSetLoadMass(handle, this->loadCases[i].id, this->loadCases[i].massCount, &this->loadCases[i].masses[0]);
 			}
+		}
+	}
+
+	// Creates loads
+	void createLoads(ScadAPI& handle) {
+
+		// Create element's array
+		u_int elementArray[1];
+
+		for (u_int i = 0; i < this->loads.size(); i++) {
+			// Only one element in array
+			elementArray[0] = this->loads[i].number;
+
+			ApiAppendForce(handle, this->loads[i].loadCase, this->loads[i].loadType, this->loads[i].loadDirection,
+				this->loads[i].dataCount, &this->loads[i].data[0], 1, elementArray);
 		}
 	}
 

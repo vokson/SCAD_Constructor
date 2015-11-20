@@ -36,4 +36,16 @@ massMatrixVector.push_back(0);
 massMatrixVector.push_back(1.2);
 massMatrixVector.push_back(1.5);
 this->loadCases.push_back(LoadCase(3,"Wind", "Type=2  ReliabilityFactor=1.1  21 5 1  1 3 0 0 0 5 18 1 0 0.3 1", massMatrixVector));
+// +++ LOADS +++
+std::vector <double> loadVector;
+loadVector.clear();
+loadVector.push_back(14.3);
+this->loads.push_back(Load(1, 6, 0, 1, loadVector));
+loadVector.clear();
+loadVector.push_back(-3.6);
+loadVector.push_back(1);
+this->loads.push_back(Load(1, 4, 15, 3, loadVector));
+loadVector.clear();
+loadVector.push_back(6.6);
+this->loads.push_back(Load(2, 2, 0, 5, loadVector));
 };
