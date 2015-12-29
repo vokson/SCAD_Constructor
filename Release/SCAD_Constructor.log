@@ -1,8 +1,10 @@
-﻿Сборка начата 29.12.2015 10:52:37.
+﻿Сборка начата 29.12.2015 17:11:30.
      1>Проект "D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\SCAD_Constructor.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         D:\Microsoft Visual Studio 9.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\SCAD_Constructor.pch" /Fo"Release\\" /Fd"Release\vc90.pdb" /Gd /TP /analyze- /errorReport:prompt Model.cpp
-         Model.cpp
+         D:\Microsoft Visual Studio 9.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\SCAD_Constructor.pch" /Fo"Release\\" /Fd"Release\vc90.pdb" /Gd /TP /analyze- /errorReport:prompt SCAD_Constructor.cpp
+         SCAD_Constructor.cpp
+     1>SCAD_Constructor.cpp(28): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 D:\Microsoft Visual Studio 9.0\VC\include\time.inl(114) : see declaration of 'localtime'
        Link:
          D:\Microsoft Visual Studio 9.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\Release\SCAD_Constructor.exe" /INCREMENTAL:NO /NOLOGO /MANIFEST /ManifestFile:"Release\SCAD_Constructor.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\Release\SCAD_Constructor.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\Release\SCAD_Constructor.lib" /MACHINE:X86 Release\SCAD_Constructor.res
          Release\Model.obj
@@ -17,4 +19,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:06.20
+Затраченное время: 00:00:01.24

@@ -1,10 +1,10 @@
-﻿Сборка начата 08.11.2015 21:36:29.
+﻿Сборка начата 29.12.2015 14:45:35.
      1>Проект "D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\SCAD_Constructor.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         D:\Microsoft Visual Studio 9.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\SCAD_Constructor.pch" /Fo"Debug\\" /Fd"Debug\vc90.pdb" /Gd /TP /analyze- /errorReport:prompt Model.cpp SCAD_Constructor.cpp
+         D:\Microsoft Visual Studio 9.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\SCAD_Constructor.pch" /Fo"Debug\\" /Fd"Debug\vc90.pdb" /Gd /TP /analyze- /errorReport:prompt SCAD_Constructor.cpp
          SCAD_Constructor.cpp
-         Model.cpp
-         Generating Code...
+     1>d:\microsoft visual studio 14.0\alexprojects\scad_constructor\scad_constructor.cpp(28): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\microsoft visual studio 9.0\vc\include\time.inl(114) : see declaration of 'localtime'
        Link:
          D:\Microsoft Visual Studio 9.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\Debug\SCAD_Constructor.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\SCAD_Constructor.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\Debug\SCAD_Constructor.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\Debug\SCAD_Constructor.lib" /MACHINE:X86 Debug\SCAD_Constructor.res
          Debug\SCAD_Constructor.exe.embed.manifest.res
@@ -19,4 +19,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:01.31
+Затраченное время: 00:00:01.83
