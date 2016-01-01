@@ -3,6 +3,8 @@
 #include <string>
 #include <cstring>
 #include <vector>
+#include "DocumentReader.h"
+#include "DocumentReaderFactory.h"
 #pragma once
 
 struct docDescription { 
@@ -62,6 +64,9 @@ private:
 				}
 			}
 
+			// Create document reader factory
+			DocumentReaderFactory docReaderFactory = DocumentReaderFactory();
+
 			// Read all documents
 			while (!documents.empty())
 			{
@@ -70,6 +75,10 @@ private:
 				doc = documents.back();
 
 				std::clog << "DOC " << doc.number << " - " << doc.address << " - " << doc.count << std::endl;
+
+				// Read document
+				DocumentReader* docReader = docReaderFactory.makeDocumentReaderByNumber(doc.number);
+				docReader.read(doc.address, doc.count);
 
 				documents.pop_back();
 			}

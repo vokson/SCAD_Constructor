@@ -2,8 +2,11 @@
 #include <fstream>
 #include <ctime>
 #include <string>
-#include "FileReader.h"
+//#include "FileReader.h"
 #include "API/Include/ScadAPIX.hxx"
+
+#include "IAnimal.h"
+#include "AnimalFactory.h"
 #pragma comment(lib, "API/Lib/32/SCADAPIX.lib" ) 
 
 
@@ -39,15 +42,23 @@ int main(int argc, char* argv[])
 		std::clog << "Read file '" << fileName << "'" << std::endl;
 
 		// Create file reader
-		FileReader fileReader = FileReader();
+		//FileReader fileReader = FileReader();
 		
 		// Check file
-		if (!fileReader.isFileCorrect(fileName)) {
+		/*if (!fileReader.isFileCorrect(fileName)) {
 			return 0;
-		}
+		}*/
 
 		// Read file
-		fileReader.read();
+		//fileReader.read();
+
+		IAnimal *pAnimal = AnimalFactory::Get()->CreateAnimal("Horse");
+		if (pAnimal)
+		{
+			std::cout << "Your animal has " << pAnimal->GetNumberOfLegs() << " legs." << std::endl;
+			std::cout << "Your animal says : ";
+			pAnimal->Speak();
+		}
 
 	}
 	else

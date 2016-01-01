@@ -60,7 +60,10 @@
     <ClInclude Include="Restraint.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="FileReader.h">
+    <ClInclude Include="IAnimal.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimalFactory.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>

@@ -149,16 +149,17 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnimalFactory.h" />
     <ClInclude Include="API\Include\ScadApiResult.hxx" />
     <ClInclude Include="API\Include\ScadApiSchema.hxx" />
     <ClInclude Include="API\Include\SCADAPIX.hxx" />
     <ClInclude Include="API\Include\ScadStructHelpAPI.hxx" />
+    <ClInclude Include="IAnimal.h" />
     <ClInclude Include="Load.h" />
     <ClInclude Include="LoadCase.h" />
     <ClInclude Include="Member.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="Node.h" />
-    <ClInclude Include="FileReader.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Restraint.h" />
     <ClInclude Include="SCAD_Constructor.h" />
