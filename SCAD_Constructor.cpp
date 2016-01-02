@@ -2,11 +2,15 @@
 #include <fstream>
 #include <ctime>
 #include <string>
-//#include "FileReader.h"
 #include "API/Include/ScadAPIX.hxx"
 
-#include "IAnimal.h"
-#include "AnimalFactory.h"
+#include "Classes/Animal/IAnimal.h"
+#include "Classes/Animal/AnimalFactory.h"
+
+#include "Classes/Document/DocumentReader.h"
+#include "Classes/Document/DocumentReaderFactory.h"
+#include "Classes/Document/Version/NodeDocumentReaderVersion_1.h"
+
 #pragma comment(lib, "API/Lib/32/SCADAPIX.lib" ) 
 
 
