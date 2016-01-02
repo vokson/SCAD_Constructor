@@ -7,6 +7,3 @@ public:
 };
 
 typedef DocumentReader* (__stdcall *CreateDocumentReaderFn)(void);
-
-
-

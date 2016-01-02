@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Заголовочные файлы\Animal">
-      <UniqueIdentifier>{574ec010-082c-4aa4-88b2-d634b6c015cb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Заголовочные файлы\Document">
       <UniqueIdentifier>{de2d8135-75b7-4384-a755-51d988edecd8}</UniqueIdentifier>
     </Filter>
@@ -44,12 +41,6 @@
     </ClInclude>
     <ClInclude Include="API\Include\ScadStructHelpAPI.hxx">
       <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Animal\IAnimal.h">
-      <Filter>Заголовочные файлы\Animal</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Animal\AnimalFactory.h">
-      <Filter>Заголовочные файлы\Animal</Filter>
     </ClInclude>
     <ClInclude Include="Classes\Document\DocumentReader.h">
       <Filter>Заголовочные файлы\Document</Filter>

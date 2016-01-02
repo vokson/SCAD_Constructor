@@ -23,7 +23,7 @@ public:
 	}
 
 	void Register(const std::string &documentReaderName, CreateDocumentReaderFn pfnCreate);
-	DocumentReader *CreateDocumentReader(const std::string &documentReaderName);
+	DocumentReader *CreateDocumentReader(const std::string &documentReaderName, const unsigned int version);
 };
 
 /*
@@ -32,7 +32,7 @@ Register the types of DocumentReader here.
 */
 DocumentReaderFactory::DocumentReaderFactory()
 {
-	Register("Node", &NodeDocumentReaderVersion_1::Create);
+	Register("Node_1", &NodeDocumentReaderVersion_1::Create);
 }
 
 void DocumentReaderFactory::Register(const std::string &documentReaderName, CreateDocumentReaderFn pfnCreate)
@@ -40,9 +40,9 @@ void DocumentReaderFactory::Register(const std::string &documentReaderName, Crea
 	m_FactoryMap[documentReaderName] = pfnCreate;
 }
 
-DocumentReader *DocumentReaderFactory::CreateDocumentReader(const std::string &documentReaderName)
+DocumentReader *DocumentReaderFactory::CreateDocumentReader(const std::string &documentReaderName, const unsigned int version)
 {
-	FactoryMap::iterator it = m_FactoryMap.find(documentReaderName);
+	FactoryMap::iterator it = m_FactoryMap.find(documentReaderName + "_" + boost::lexical_cast<std::string>(version));
 	if (it != m_FactoryMap.end())
 		return it->second();
 	return NULL;

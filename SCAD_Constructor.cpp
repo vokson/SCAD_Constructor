@@ -1,15 +1,21 @@
 #include "stdafx.h"
+
+// Standard
 #include <fstream>
 #include <ctime>
 #include <string>
+
+// Boost
+#include <boost/lexical_cast.hpp>
+
+// SCAD
 #include "API/Include/ScadAPIX.hxx"
 
-#include "Classes/Animal/IAnimal.h"
-#include "Classes/Animal/AnimalFactory.h"
-
+// Classes
 #include "Classes/Document/DocumentReader.h"
-#include "Classes/Document/DocumentReaderFactory.h"
 #include "Classes/Document/Version/NodeDocumentReaderVersion_1.h"
+#include "Classes/Document/DocumentReaderFactory.h"
+
 
 #pragma comment(lib, "API/Lib/32/SCADAPIX.lib" ) 
 
@@ -47,7 +53,7 @@ int main(int argc, char* argv[])
 
 		// Create file reader
 		//FileReader fileReader = FileReader();
-		
+
 		// Check file
 		/*if (!fileReader.isFileCorrect(fileName)) {
 			return 0;
@@ -56,12 +62,10 @@ int main(int argc, char* argv[])
 		// Read file
 		//fileReader.read();
 
-		IAnimal *pAnimal = AnimalFactory::Get()->CreateAnimal("Horse");
-		if (pAnimal)
+		DocumentReader *docReader = DocumentReaderFactory::Get()->CreateDocumentReader("Node", 2);
+		if (docReader)
 		{
-			std::cout << "Your animal has " << pAnimal->GetNumberOfLegs() << " legs." << std::endl;
-			std::cout << "Your animal says : ";
-			pAnimal->Speak();
+			docReader->read(11, 22);
 		}
 
 	}
