@@ -16,6 +16,30 @@
     <Filter Include="Заголовочные файлы\Document">
       <UniqueIdentifier>{de2d8135-75b7-4384-a755-51d988edecd8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Заголовочные файлы\SCAD">
+      <UniqueIdentifier>{14a3fc86-9347-4084-9f50-dc4df7da8944}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Document\Node">
+      <UniqueIdentifier>{c25f69ae-005b-4c33-8983-8087c7f8e190}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Document\File">
+      <UniqueIdentifier>{2e43bd89-8aab-44be-8fd9-57991bb2cbd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Document">
+      <UniqueIdentifier>{42c68211-3db2-41cc-ac92-e9e0c4e7fe6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Document\File">
+      <UniqueIdentifier>{3e40e34e-bcdf-4a6c-83e2-82d18dd17d78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Document\Node">
+      <UniqueIdentifier>{63796d33-b515-4fbf-bdbd-96efe6de3c46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\FileChecker">
+      <UniqueIdentifier>{bffc5042-b208-45fc-a3fa-ff12f160dc07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\FileChecker">
+      <UniqueIdentifier>{16900788-c59f-4fa6-9765-54f97ca0af51}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -30,26 +54,35 @@
     <ClInclude Include="SCAD_Constructor.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="API\Include\SCADAPIX.hxx">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="API\Include\ScadApiResult.hxx">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="API\Include\ScadApiSchema.hxx">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="API\Include\ScadStructHelpAPI.hxx">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\Document\DocumentReader.h">
-      <Filter>Заголовочные файлы\Document</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Document\Version\NodeDocumentReaderVersion_1.h">
       <Filter>Заголовочные файлы\Document</Filter>
     </ClInclude>
     <ClInclude Include="Classes\Document\DocumentReaderFactory.h">
       <Filter>Заголовочные файлы\Document</Filter>
+    </ClInclude>
+    <ClInclude Include="API\Include\ScadApiResult.hxx">
+      <Filter>Заголовочные файлы\SCAD</Filter>
+    </ClInclude>
+    <ClInclude Include="API\Include\ScadApiSchema.hxx">
+      <Filter>Заголовочные файлы\SCAD</Filter>
+    </ClInclude>
+    <ClInclude Include="API\Include\SCADAPIX.hxx">
+      <Filter>Заголовочные файлы\SCAD</Filter>
+    </ClInclude>
+    <ClInclude Include="API\Include\ScadStructHelpAPI.hxx">
+      <Filter>Заголовочные файлы\SCAD</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Document\Node\Document_10_Version_1_Reader.h">
+      <Filter>Заголовочные файлы\Document\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Document\File\File_Version_1_Reader.h">
+      <Filter>Заголовочные файлы\Document\File</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\FileChecker\FileFormatChecker.h">
+      <Filter>Заголовочные файлы\FileChecker</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +91,18 @@
     </ClCompile>
     <ClCompile Include="SCAD_Constructor.cpp">
       <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Document\DocumentReaderFactory.cpp">
+      <Filter>Файлы исходного кода\Document</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Document\File\File_Version_1_Reader.cpp">
+      <Filter>Файлы исходного кода\Document\File</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Document\Node\Document_10_Version_1_Reader.cpp">
+      <Filter>Файлы исходного кода\Document\Node</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\FileChecker\FileFormatChecker.cpp">
+      <Filter>Файлы исходного кода\FileChecker</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

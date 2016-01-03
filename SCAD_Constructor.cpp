@@ -1,26 +1,11 @@
-#include "stdafx.h"
+#include "SCAD_Constructor.h"
+#include "Header.h"
 
-// Standard
-#include <fstream>
-#include <ctime>
-#include <string>
-
-// Boost
-#include <boost/lexical_cast.hpp>
-
-// SCAD
-#include "API/Include/ScadAPIX.hxx"
-
-// Classes
-#include "Classes/Document/DocumentReader.h"
-#include "Classes/Document/Version/NodeDocumentReaderVersion_1.h"
-#include "Classes/Document/DocumentReaderFactory.h"
-
-
-#pragma comment(lib, "API/Lib/32/SCADAPIX.lib" ) 
-
-
-std::string fileName; /*Name of file*/
+// Variables
+std::string fileName; /* Name of file */
+unsigned short fileVersion; /* Version of file */
+unsigned int offset; /* Start offset for file reader */
+unsigned int count; /* Count of bytes from offset to end of file */
 
 /*
 Arguments format
@@ -29,52 +14,46 @@ Arguments format
 
 int main(int argc, char* argv[])
 {
+	//Redirect std::clog to file
+	std::ofstream logFile("log.txt");
+	std::clog.rdbuf(logFile.rdbuf());
+
+	prepareLogFile();
+
 	// Получаем аргументы - имя файла с Model Data
-	if (argc > 1)// если передаем аргументы, то argc будет больше 1(в зависимости от кол-ва аргументов)
-	{
-		//Redirect std::clog to file
-		std::ofstream logFile("log.txt");
-		std::clog.rdbuf(logFile.rdbuf());
-
-		//Write Date&Tiem to Log
-		time_t t = std::time(0);   // get time now
-		struct tm * now = localtime(&t);
-		std::clog << (now->tm_year + 1900) << '-'
-			<< (now->tm_mon + 1) << '-'
-			<< now->tm_mday << " "
-			<< now->tm_hour << ":"
-			<< now->tm_min << ":"
-			<< now->tm_sec
-			<< std::endl;
-
+	// если передаем аргументы, то argc будет больше 1(в зависимости от кол-ва аргументов)
+	if (argc > 1) {
+	
+		
 		// Take arguments
 		fileName = std::string(argv[1]);
 		std::clog << "Read file '" << fileName << "'" << std::endl;
 
-		// Create file reader
-		//FileReader fileReader = FileReader();
-
 		// Check file
-		/*if (!fileReader.isFileCorrect(fileName)) {
+		if (!FileFormatChecker::isFileCorrect(fileName, fileVersion, offset, count)) {
 			return 0;
-		}*/
+		}
+		
+		// Open file
+		std::ifstream f(fileName.c_str(), std::ios::binary);
 
-		// Read file
-		//fileReader.read();
+		if (f.good()) {
 
-		DocumentReader *docReader = DocumentReaderFactory::Get()->CreateDocumentReader("Node", 2);
-		if (docReader)
-		{
-			docReader->read(11, 22);
+			// Create file reader
+			DocumentReader *fileReader = DocumentReaderFactory::Get()->CreateFileReader(fileVersion);
+
+			// Read file
+			if (fileReader)	{
+				fileReader->read(f, offset, count);
+			}
+			else {
+				std::clog << "ERROR - Incorrect file version(" << fileVersion << ")" << std::endl;
+			}
+			
 		}
 
-	}
-	else
-	{
-		std::cout << "Arguments are wrong !!!" << std::endl;
-		std::cout << std::endl;
-		std::cout << "Arguments format:" << std::endl;
-		std::cout << "   [1] - File Name" << std::endl;
+	} 	else	{
+		wrongArgumentsFeedback();
 	}
 
 	system("pause");
@@ -118,4 +97,29 @@ int main(int argc, char* argv[])
 	//ApiRelease(&handle);
 
 }
+
+/* Function to prepare log file */
+void prepareLogFile() {
+	
+
+	//Write Date&Tiem to Log
+	time_t t = std::time(0);   // get time now
+	struct tm * now = localtime(&t);
+	std::clog << (now->tm_year + 1900) << '-'
+		<< (now->tm_mon + 1) << '-'
+		<< now->tm_mday << " "
+		<< now->tm_hour << ":"
+		<< now->tm_min << ":"
+		<< now->tm_sec
+		<< std::endl;
+}
+
+/* Function provides feedback in case of wrong arguments passed */
+void wrongArgumentsFeedback() {
+	std::cout << "Arguments are wrong !!!" << std::endl;
+	std::cout << std::endl;
+	std::cout << "Arguments format:" << std::endl;
+	std::cout << "   [1] - File Name" << std::endl;
+}
+
 
