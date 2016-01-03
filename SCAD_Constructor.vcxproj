@@ -158,6 +158,9 @@
     <ClInclude Include="Classes\Document\File\File_Version_1_Reader.h" />
     <ClInclude Include="Classes\Document\Node\Document_10_Version_1_Reader.h" />
     <ClInclude Include="Classes\FileChecker\FileFormatChecker.h" />
+    <ClInclude Include="Classes\Instance\Instance.h" />
+    <ClInclude Include="Classes\Instance\Node.h" />
+    <ClInclude Include="Classes\Model\Model.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="SCAD_Constructor.h" />
     <ClInclude Include="stdafx.h" />
@@ -168,6 +171,9 @@
     <ClCompile Include="Classes\Document\File\File_Version_1_Reader.cpp" />
     <ClCompile Include="Classes\Document\Node\Document_10_Version_1_Reader.cpp" />
     <ClCompile Include="Classes\FileChecker\FileFormatChecker.cpp" />
+    <ClCompile Include="Classes\Instance\Node.cpp" />
+    <ClCompile Include="Classes\Model\Model.cpp" />
+    <ClCompile Include="DocumentReader.cpp" />
     <ClCompile Include="SCAD_Constructor.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

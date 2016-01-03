@@ -19,6 +19,6 @@ private:
 	
 
 public:
-	void read(std::ifstream &f, unsigned int address, unsigned int count);
+	void read(std::ifstream &f, unsigned int address, int count);
 	static DocumentReader * __stdcall Create() { return new File_Version_1_Reader(); }
 };

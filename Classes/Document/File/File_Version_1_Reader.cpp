@@ -2,7 +2,7 @@
 #pragma once
 
 /* Read file */
-void File_Version_1_Reader::read(std::ifstream &f, unsigned int address, unsigned int count) {
+void File_Version_1_Reader::read(std::ifstream &f, unsigned int address, int count) {
 
 	// Get description address
 	unsigned int descriptionAddress;

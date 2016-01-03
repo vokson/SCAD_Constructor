@@ -15,12 +15,21 @@
 //#include "API/Include/ScadAPIX.hxx"
 
 // Classes
+#include "Classes/Instance/Instance.h"
+#include "Classes/Instance/Node.h"
+
+#include "Classes/Model/Model.h"
+
 #include "Classes/FileChecker/FileFormatChecker.h"
 
 #include "Classes/Document/DocumentReader.h"
 #include "Classes/Document/File/File_Version_1_Reader.h"
 #include "Classes/Document/Node/Document_10_Version_1_Reader.h"
 #include "Classes/Document/DocumentReaderFactory.h"
+
+
+
+
 
 
 #pragma comment(lib, "API/Lib/32/SCADAPIX.lib" )

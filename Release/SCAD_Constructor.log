@@ -1,4 +1,4 @@
-﻿Сборка начата 03.01.2016 13:34:06.
+﻿Сборка начата 03.01.2016 21:52:01.
      1>Проект "D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\SCAD_Constructor.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
          D:\Microsoft Visual Studio 9.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc90.pdb" /Gd /TP /analyze- /errorReport:prompt Classes\Document\Node\Document_10_Version_1_Reader.cpp
@@ -9,6 +9,9 @@
          Release\File_Version_1_Reader.obj
          Release\Document_10_Version_1_Reader.obj
          Release\FileFormatChecker.obj
+         Release\Node.obj
+         Release\Model.obj
+         Release\DocumentReader.obj
          Release\SCAD_Constructor.obj
          Release\stdafx.obj
          Generating code
@@ -20,4 +23,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:02.88
+Затраченное время: 00:00:02.71

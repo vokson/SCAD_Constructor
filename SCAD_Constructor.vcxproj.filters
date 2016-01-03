@@ -40,6 +40,18 @@
     <Filter Include="Файлы исходного кода\FileChecker">
       <UniqueIdentifier>{16900788-c59f-4fa6-9765-54f97ca0af51}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Заголовочные файлы\Instance">
+      <UniqueIdentifier>{db9cd4bf-4db5-4ed3-8cea-ff5258af02ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Model">
+      <UniqueIdentifier>{01afabfa-08f9-4dbb-9f39-4af717208bb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Model">
+      <UniqueIdentifier>{c672c8b7-1e2c-4ba8-9ce2-1beb451e7c57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Instance">
+      <UniqueIdentifier>{c4303876-4b22-43a4-b21d-22fc4f7112b5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -84,6 +96,15 @@
     <ClInclude Include="Classes\FileChecker\FileFormatChecker.h">
       <Filter>Заголовочные файлы\FileChecker</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\Instance\Node.h">
+      <Filter>Заголовочные файлы\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Instance\Instance.h">
+      <Filter>Заголовочные файлы\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Model\Model.h">
+      <Filter>Заголовочные файлы\Model</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -103,6 +124,15 @@
     </ClCompile>
     <ClCompile Include="Classes\FileChecker\FileFormatChecker.cpp">
       <Filter>Файлы исходного кода\FileChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentReader.cpp">
+      <Filter>Файлы исходного кода\Document</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Model\Model.cpp">
+      <Filter>Файлы исходного кода\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Instance\Node.cpp">
+      <Filter>Файлы исходного кода\Instance</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
