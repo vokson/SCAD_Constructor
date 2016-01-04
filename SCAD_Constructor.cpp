@@ -91,10 +91,10 @@ int main(int argc, char* argv[])
 	//model.createLoads(handle);
 
 
-	//APICode Code;
-	//Code = ApiWriteProject(handle, "TestNewProject.spr");
-	//if (Code != APICode_OK) { APIPhrase(handle, Code); }
-	//ApiRelease(&handle);
+	/*APICode Code;
+	Code = ApiWriteProject(handle, "TestNewProject.spr");
+	if (Code != APICode_OK) { APIPhrase(handle, Code); }
+	ApiRelease(&handle);*/
 
 }
 

@@ -1,3 +1,4 @@
-2016-1-3 21:52:42
+2016-1-4 6:3:37
 Read file 'Model.bin'
 DOC 10[1]  18 - 456
+Document_10_Version_1_Reader::read  this->number = 10, this->version = 1

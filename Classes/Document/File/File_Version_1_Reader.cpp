@@ -6,6 +6,8 @@ void File_Version_1_Reader::read(std::ifstream &f, unsigned int address, int cou
 
 	// Get description address
 	unsigned int descriptionAddress;
+	//std::clog << " File_Version_1_Reader::read tellg = " << f.tellg() << std::endl;
+
 	f.seekg(address);
 	f.read((char *)&descriptionAddress, sizeof(unsigned int));
 
@@ -82,7 +84,7 @@ void File_Version_1_Reader::readAllDocumentsBody(std::ifstream &f) {
 	while (!this->documents.empty())
 	{
 		// Create new document description
-		docDescription doc = documents.back();
+		docDescription doc = this->documents.back();
 
 		std::clog << "DOC " << doc.number << "[" << doc.version << "]  " << doc.address << " - " << doc.count << std::endl;
 

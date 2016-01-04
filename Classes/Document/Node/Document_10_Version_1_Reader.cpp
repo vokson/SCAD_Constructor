@@ -9,7 +9,8 @@ Document_10_Version_1_Reader::Document_10_Version_1_Reader() {
 void  Document_10_Version_1_Reader::read(std::ifstream &f, unsigned int address, int count) {
 	
 
-	f.seekg(0, address);
+	f.seekg(address);
+	std::clog << "Document_10_Version_1_Reader::read  this->number = " << this->number << ", this->version = " << this->version << std::endl;
 
 	// Check document header
 	bool isDocCorrect = this->isDocumentCorrect(f, this->number, this->version);

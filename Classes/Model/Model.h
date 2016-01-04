@@ -1,7 +1,7 @@
 #pragma once
 
 class Model {
-protected:
+private:
 	/* Collection of nodes */
 	static std::vector<Node> nodes;
 
@@ -17,22 +17,16 @@ protected:
 	///*Collection of loads*/
 	//std::vector<Load> loads;
 
+	/* Creates nodes */
+	static void createNodes(ScadAPI& handle);
+
 public:
 	
 	/* Add object to Model */
 	static void addObject(Instance *object);
 
-	
-
-	//// Creates nodes
-	//void createNodes(ScadAPI& handle) {
-	//	// узлы
-	//	ApiNodeAddSize(handle, this->nodes.size());
-	//	for (u_int i = 0; i < this->nodes.size(); i++) {
-	//		ApiNodeUpdate(handle, this->nodes[i].id, this->nodes[i].x, this->nodes[i].y, this->nodes[i].z);
-	//		ApiNodeSetName(handle, this->nodes[i].id, this->nodes[i].name.c_str());
-	//	}
-	//}
+	/* Create Model */
+	static void create(ScadAPI& handle);
 
 	//// Creates restraint
 	//void createRestraints(ScadAPI&	handle) {
