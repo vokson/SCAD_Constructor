@@ -26,7 +26,7 @@ public:
 	static void addObject(Instance *object);
 
 	/* Create Model */
-	static void create(ScadAPI& handle);
+	static void create(std::string fileName);
 
 	//// Creates restraint
 	//void createRestraints(ScadAPI&	handle) {

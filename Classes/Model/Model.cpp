@@ -12,21 +12,21 @@ void Model::addObject(Instance *object) {
 }
 
 /* Create Model */
-void Model::create(ScadAPI& handle) {
+void Model::create(std::string fileName) {
 	ScadAPI	handle(NULL);
 	const static UnitsAPI Un[3] = { { "m", 1 },{ "cm", 100 },{ "T", 1 } };
 
 	if (ApiCreate(&handle) != APICode_OK) ApiMsg("Error");  //  создание объекта API и контроль
 	if (ApiClear(handle) != APICode_OK) ApiMsg("Error");    //  после открытия можно не делать
 	if (ApiSetLanguage(handle, 1) != APICode_OK) ApiMsg("Error");
-	ApiSetName(handle, "TestNewProject");
+	ApiSetName(handle, fileName.c_str());
 	ApiSetUnits(handle, Un);
 	if (ApiSetTypeSchema(handle, 5) != APICode_OK) ApiMsg("Error");
 
 	Model::createNodes(handle);
 
 	APICode Code;
-	Code = ApiWriteProject(handle, "TestNewProject.spr");
+	Code = ApiWriteProject(handle, (fileName + ".spr").c_str());
 	if (Code != APICode_OK) { APIPhrase(handle, Code); }
 	ApiRelease(&handle);
 }

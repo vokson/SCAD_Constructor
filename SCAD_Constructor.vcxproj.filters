@@ -13,26 +13,8 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Заголовочные файлы\Document">
-      <UniqueIdentifier>{de2d8135-75b7-4384-a755-51d988edecd8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Заголовочные файлы\SCAD">
       <UniqueIdentifier>{14a3fc86-9347-4084-9f50-dc4df7da8944}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Заголовочные файлы\Document\Node">
-      <UniqueIdentifier>{c25f69ae-005b-4c33-8983-8087c7f8e190}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Заголовочные файлы\Document\File">
-      <UniqueIdentifier>{2e43bd89-8aab-44be-8fd9-57991bb2cbd8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Файлы исходного кода\Document">
-      <UniqueIdentifier>{42c68211-3db2-41cc-ac92-e9e0c4e7fe6b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Файлы исходного кода\Document\File">
-      <UniqueIdentifier>{3e40e34e-bcdf-4a6c-83e2-82d18dd17d78}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Файлы исходного кода\Document\Node">
-      <UniqueIdentifier>{63796d33-b515-4fbf-bdbd-96efe6de3c46}</UniqueIdentifier>
     </Filter>
     <Filter Include="Заголовочные файлы\FileChecker">
       <UniqueIdentifier>{bffc5042-b208-45fc-a3fa-ff12f160dc07}</UniqueIdentifier>
@@ -52,6 +34,36 @@
     <Filter Include="Файлы исходного кода\Instance">
       <UniqueIdentifier>{c4303876-4b22-43a4-b21d-22fc4f7112b5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Заголовочные файлы\Reader">
+      <UniqueIdentifier>{99f83341-1183-48a9-b35f-bac74d82819d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Reader\Document">
+      <UniqueIdentifier>{de2d8135-75b7-4384-a755-51d988edecd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Reader\Document\Node">
+      <UniqueIdentifier>{c25f69ae-005b-4c33-8983-8087c7f8e190}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Reader\File">
+      <UniqueIdentifier>{2e43bd89-8aab-44be-8fd9-57991bb2cbd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Reader">
+      <UniqueIdentifier>{ed867709-0d80-4732-915f-bc9760588b2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Reader\Document">
+      <UniqueIdentifier>{42c68211-3db2-41cc-ac92-e9e0c4e7fe6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Reader\Document\Node">
+      <UniqueIdentifier>{63796d33-b515-4fbf-bdbd-96efe6de3c46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Reader\File">
+      <UniqueIdentifier>{3e40e34e-bcdf-4a6c-83e2-82d18dd17d78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Time">
+      <UniqueIdentifier>{c5d90e26-ab77-4978-9623-f061936aee07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Time">
+      <UniqueIdentifier>{32920325-e846-4eed-8428-f1e693105011}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -62,15 +74,6 @@
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="SCAD_Constructor.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Document\DocumentReader.h">
-      <Filter>Заголовочные файлы\Document</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Document\DocumentReaderFactory.h">
-      <Filter>Заголовочные файлы\Document</Filter>
     </ClInclude>
     <ClInclude Include="API\Include\ScadApiResult.hxx">
       <Filter>Заголовочные файлы\SCAD</Filter>
@@ -83,12 +86,6 @@
     </ClInclude>
     <ClInclude Include="API\Include\ScadStructHelpAPI.hxx">
       <Filter>Заголовочные файлы\SCAD</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Document\Node\Document_10_Version_1_Reader.h">
-      <Filter>Заголовочные файлы\Document\Node</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Document\File\File_Version_1_Reader.h">
-      <Filter>Заголовочные файлы\Document\File</Filter>
     </ClInclude>
     <ClInclude Include="Header.h">
       <Filter>Заголовочные файлы</Filter>
@@ -105,6 +102,24 @@
     <ClInclude Include="Classes\Model\Model.h">
       <Filter>Заголовочные файлы\Model</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\Reader\Document\DocumentReader.h">
+      <Filter>Заголовочные файлы\Reader\Document</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Reader\Reader.h">
+      <Filter>Заголовочные файлы\Reader</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Reader\ReaderFactory.h">
+      <Filter>Заголовочные файлы\Reader</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Reader\File\File_Version_1_Reader.h">
+      <Filter>Заголовочные файлы\Reader\File</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Reader\Document\Node\Document_10_Version_1_Reader.h">
+      <Filter>Заголовочные файлы\Reader\Document\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Time\Timer.h">
+      <Filter>Заголовочные файлы\Time</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -113,26 +128,29 @@
     <ClCompile Include="SCAD_Constructor.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="Classes\Document\DocumentReaderFactory.cpp">
-      <Filter>Файлы исходного кода\Document</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Document\File\File_Version_1_Reader.cpp">
-      <Filter>Файлы исходного кода\Document\File</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Document\Node\Document_10_Version_1_Reader.cpp">
-      <Filter>Файлы исходного кода\Document\Node</Filter>
-    </ClCompile>
     <ClCompile Include="Classes\FileChecker\FileFormatChecker.cpp">
       <Filter>Файлы исходного кода\FileChecker</Filter>
-    </ClCompile>
-    <ClCompile Include="DocumentReader.cpp">
-      <Filter>Файлы исходного кода\Document</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Model\Model.cpp">
       <Filter>Файлы исходного кода\Model</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Instance\Node.cpp">
       <Filter>Файлы исходного кода\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Reader\ReaderFactory.cpp">
+      <Filter>Файлы исходного кода\Reader</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Reader\File\File_Version_1_Reader.cpp">
+      <Filter>Файлы исходного кода\Reader\File</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Reader\Document\Node\Document_10_Version_1_Reader.cpp">
+      <Filter>Файлы исходного кода\Reader\Document\Node</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Reader\Document\DocumentReader.cpp">
+      <Filter>Файлы исходного кода\Reader\Document</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Time\Timer.cpp">
+      <Filter>Файлы исходного кода\Time</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

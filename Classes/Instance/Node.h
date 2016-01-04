@@ -9,4 +9,5 @@ public:
 	/* Default constructor*/
 	Node(unsigned int id, std::string name, double x, double y, double z);
 	void abstractFunction();
+
 };
