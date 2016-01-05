@@ -16,12 +16,6 @@
     <Filter Include="Заголовочные файлы\SCAD">
       <UniqueIdentifier>{14a3fc86-9347-4084-9f50-dc4df7da8944}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Заголовочные файлы\FileChecker">
-      <UniqueIdentifier>{bffc5042-b208-45fc-a3fa-ff12f160dc07}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Файлы исходного кода\FileChecker">
-      <UniqueIdentifier>{16900788-c59f-4fa6-9765-54f97ca0af51}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Заголовочные файлы\Instance">
       <UniqueIdentifier>{db9cd4bf-4db5-4ed3-8cea-ff5258af02ff}</UniqueIdentifier>
     </Filter>
@@ -90,9 +84,6 @@
     <ClInclude Include="Header.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\FileChecker\FileFormatChecker.h">
-      <Filter>Заголовочные файлы\FileChecker</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\Instance\Node.h">
       <Filter>Заголовочные файлы\Instance</Filter>
     </ClInclude>
@@ -120,6 +111,9 @@
     <ClInclude Include="Classes\Time\Timer.h">
       <Filter>Заголовочные файлы\Time</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\Reader\File\FileReader.h">
+      <Filter>Заголовочные файлы\Reader\File</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -127,9 +121,6 @@
     </ClCompile>
     <ClCompile Include="SCAD_Constructor.cpp">
       <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\FileChecker\FileFormatChecker.cpp">
-      <Filter>Файлы исходного кода\FileChecker</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Model\Model.cpp">
       <Filter>Файлы исходного кода\Model</Filter>
@@ -151,6 +142,9 @@
     </ClCompile>
     <ClCompile Include="Classes\Time\Timer.cpp">
       <Filter>Файлы исходного кода\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Reader\File\FileReader.cpp">
+      <Filter>Файлы исходного кода\Reader\File</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

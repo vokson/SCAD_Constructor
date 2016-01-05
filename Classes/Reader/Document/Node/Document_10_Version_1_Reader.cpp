@@ -9,18 +9,25 @@ Document_10_Version_1_Reader::Document_10_Version_1_Reader() {
 
 Instance* Document_10_Version_1_Reader::readSingleObject(std::ifstream &f, int &count) {
 	unsigned int id; // Node's id
+	unsigned short nameLength; // Count of bytes in name
 	double x, y, z; // Node's coordinate
+	char charName[100]; // Node's name
+	
 
 	f.read((char *)&id, sizeof(unsigned int));
 	f.read((char *)&x, sizeof(double));
 	f.read((char *)&y, sizeof(double));
 	f.read((char *)&z, sizeof(double));
+	f.read((char *)&nameLength, sizeof(unsigned short));
+	f.read(charName, nameLength);
 
-	std::clog << Timer::get() << "ID = " << id << "  COORDINATES (" << x << ", " << y << ", " << z << ")" << std::endl;
+	std::string stringName(charName); // Node's name
+
+	std::clog << "   ID = " << id << "  COORDINATES (" << x << ", " << y << ", " << z << ") NAME='" << stringName << "'" << std::endl;
 
 	count -= sizeof(id) + sizeof(x) + sizeof(y) + sizeof(z);
 
-	Node* object = new Node(id, "", x, y, z);
+	Node* object = new Node(id, stringName, x, y, z);
 
 	return object;
 }

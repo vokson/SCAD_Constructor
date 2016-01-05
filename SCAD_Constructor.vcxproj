@@ -153,12 +153,12 @@
     <ClInclude Include="API\Include\ScadApiSchema.hxx" />
     <ClInclude Include="API\Include\SCADAPIX.hxx" />
     <ClInclude Include="API\Include\ScadStructHelpAPI.hxx" />
-    <ClInclude Include="Classes\FileChecker\FileFormatChecker.h" />
     <ClInclude Include="Classes\Instance\Instance.h" />
     <ClInclude Include="Classes\Instance\Node.h" />
     <ClInclude Include="Classes\Model\Model.h" />
     <ClInclude Include="Classes\Reader\Document\DocumentReader.h" />
     <ClInclude Include="Classes\Reader\Document\Node\Document_10_Version_1_Reader.h" />
+    <ClInclude Include="Classes\Reader\File\FileReader.h" />
     <ClInclude Include="Classes\Reader\File\File_Version_1_Reader.h" />
     <ClInclude Include="Classes\Reader\Reader.h" />
     <ClInclude Include="Classes\Reader\ReaderFactory.h" />
@@ -168,11 +168,11 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Classes\FileChecker\FileFormatChecker.cpp" />
     <ClCompile Include="Classes\Instance\Node.cpp" />
     <ClCompile Include="Classes\Model\Model.cpp" />
     <ClCompile Include="Classes\Reader\Document\DocumentReader.cpp" />
     <ClCompile Include="Classes\Reader\Document\Node\Document_10_Version_1_Reader.cpp" />
+    <ClCompile Include="Classes\Reader\File\FileReader.cpp" />
     <ClCompile Include="Classes\Reader\File\File_Version_1_Reader.cpp" />
     <ClCompile Include="Classes\Reader\ReaderFactory.cpp" />
     <ClCompile Include="Classes\Time\Timer.cpp" />

@@ -8,7 +8,7 @@ struct docDescription {
 };
 
 // Reader implementations
-class File_Version_1_Reader : public Reader
+class File_Version_1_Reader : public FileReader
 {
 private:
 	std::vector<docDescription> documents; // Vector of docs' descriptions

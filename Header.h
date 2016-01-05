@@ -27,9 +27,10 @@
 
 #include "Classes/Model/Model.h"
 
-#include "Classes/FileChecker/FileFormatChecker.h"
+//#include "Classes/FileChecker/FileFormatChecker.h"
 
 #include "Classes/Reader/Reader.h"
+#include "Classes/Reader/File/FileReader.h"
 #include "Classes/Reader/File/File_Version_1_Reader.h"
 #include "Classes/Reader/Document/DocumentReader.h"
 #include "Classes/Reader/Document/Node/Document_10_Version_1_Reader.h"

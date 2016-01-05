@@ -28,10 +28,10 @@ int main(int argc, char* argv[])
 		// Take arguments
 		fileName = std::string(argv[1]);
 
-		std::clog << Timer::get() << "Read file '" << fileName << "'" << std::endl;
+		std::clog << "   Read file '" << fileName << "'" << std::endl;
 
 		// Check file
-		if (!FileFormatChecker::isFileCorrect(fileName, fileVersion, offset, count)) {
+		if (!FileReader::isFileCorrect(fileName, fileVersion, offset, count)) {
 			return 0;
 		}
 		

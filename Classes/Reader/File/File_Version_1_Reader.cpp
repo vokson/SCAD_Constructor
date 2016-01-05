@@ -6,7 +6,6 @@ void File_Version_1_Reader::read(std::ifstream &f, unsigned int address, int cou
 
 	// Get description address
 	unsigned int descriptionAddress;
-	//std::clog << " File_Version_1_Reader::read tellg = " << f.tellg() << std::endl;
 
 	f.seekg(address);
 	f.read((char *)&descriptionAddress, sizeof(unsigned int));
@@ -81,14 +80,14 @@ docDescription File_Version_1_Reader::readSingleDocumentDescription(std::ifstrea
 */
 void File_Version_1_Reader::readAllDocumentsBody(std::ifstream &f) {
 
-	std::clog << "   DOCUMENTS' DESCRIPTION" << std::endl;
+	std::clog << std::endl << Timer::get() << "   DOCUMENTS' DESCRIPTION" << std::endl;
 
 	while (!this->documents.empty())
 	{
 		// Create new document description
 		docDescription doc = this->documents.back();
 
-		std::clog << Timer::get() << "DOC " << doc.number << "[" << doc.version << "]  address = " << doc.address << ", bytes' count = " << doc.count << std::endl;
+		std::clog << "   DOC " << doc.number << "[" << doc.version << "]  address = " << doc.address << ", bytes' count = " << doc.count << std::endl;
 
 		// Read document
 		Reader *docReader = ReaderFactory::Get()->CreateDocumentReader(doc.number, doc.version);

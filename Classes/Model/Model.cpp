@@ -13,6 +13,9 @@ void Model::addObject(Instance *object) {
 
 /* Create Model */
 void Model::create(std::string fileName) {
+
+	std::clog << std::endl << Timer::get() << "   CREATE MODEL" << std::endl;
+
 	ScadAPI	handle(NULL);
 	const static UnitsAPI Un[3] = { { "m", 1 },{ "cm", 100 },{ "T", 1 } };
 
@@ -24,6 +27,8 @@ void Model::create(std::string fileName) {
 	if (ApiSetTypeSchema(handle, 5) != APICode_OK) ApiMsg("Error");
 
 	Model::createNodes(handle);
+
+	std::clog << "   Write file '" << fileName << "'" << std::endl;
 
 	APICode Code;
 	Code = ApiWriteProject(handle, (fileName + ".spr").c_str());
