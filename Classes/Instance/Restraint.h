@@ -1,14 +1,14 @@
 #pragma once
-#include <string>
 
-class Restraint {
+class Restraint : public Instance {
+protected:
+	/* Abstract fucntion to make class polymorphous */
+	void abstractFunction();
+
 public:
-	int id; /* Номер узла */
-	int fix; /* Закрепление в узле */
+	unsigned int id; /* Номер узла */
+	unsigned short fix; /* Закрепление в узле */
 			 
 	/* Default constructor*/
-	Restraint (int id, int fix) {
-		this->id = id;
-		this->fix = fix;
-	}
+	Restraint(unsigned int id, unsigned short fix);
 };

@@ -58,6 +58,30 @@
     <Filter Include="Файлы исходного кода\Time">
       <UniqueIdentifier>{32920325-e846-4eed-8428-f1e693105011}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Заголовочные файлы\Reader\Document\Member">
+      <UniqueIdentifier>{2a77c1e8-bc53-46bc-b99b-6f2c96f741a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Reader\Document\Restraint">
+      <UniqueIdentifier>{c1d0422a-7c5d-43cb-b5c9-03e17c1b70e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Reader\Document\Load">
+      <UniqueIdentifier>{5bd7488f-b4dd-4aed-b450-c98940eb5b29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Reader\Document\LoadCase">
+      <UniqueIdentifier>{697f3ec1-0b38-45c1-8ee2-77d39f147847}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Reader\Document\LoadCase">
+      <UniqueIdentifier>{f33c9bd6-7aa1-437a-a4fc-9763d2987ee2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Reader\Document\Load">
+      <UniqueIdentifier>{39a2e5b2-1562-48be-a60e-c9a3380e5aa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Reader\Document\Member">
+      <UniqueIdentifier>{7f82e4a9-e08d-430b-8d2e-fb26b1e2d448}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Reader\Document\Restraint">
+      <UniqueIdentifier>{a7c1dd44-3a05-419e-ab40-46730e87bf9b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -114,6 +138,30 @@
     <ClInclude Include="Classes\Reader\File\FileReader.h">
       <Filter>Заголовочные файлы\Reader\File</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\Instance\Load.h">
+      <Filter>Заголовочные файлы\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Instance\LoadCase.h">
+      <Filter>Заголовочные файлы\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Instance\Member.h">
+      <Filter>Заголовочные файлы\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Instance\Restraint.h">
+      <Filter>Заголовочные файлы\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Reader\Document\Member\Document_20_Version_1_Reader.h">
+      <Filter>Заголовочные файлы\Reader\Document\Member</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Reader\Document\Load\Document_50_Version_1_Reader.h">
+      <Filter>Заголовочные файлы\Reader\Document\Load</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Reader\Document\LoadCase\Document_40_Version_1_Reader.h">
+      <Filter>Заголовочные файлы\Reader\Document\LoadCase</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Reader\Document\Restraint\Document_30_Version_1_Reader.h">
+      <Filter>Заголовочные файлы\Reader\Document\Restraint</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -145,6 +193,30 @@
     </ClCompile>
     <ClCompile Include="Classes\Reader\File\FileReader.cpp">
       <Filter>Файлы исходного кода\Reader\File</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Instance\Load.cpp">
+      <Filter>Файлы исходного кода\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Instance\LoadCase.cpp">
+      <Filter>Файлы исходного кода\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Instance\Member.cpp">
+      <Filter>Файлы исходного кода\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Instance\Restraint.cpp">
+      <Filter>Файлы исходного кода\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Reader\Document\Member\Document_20_Version_1_Reader.cpp">
+      <Filter>Файлы исходного кода\Reader\Document\Member</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Reader\Document\Load\Document_50_Version_1_Reader.cpp">
+      <Filter>Файлы исходного кода\Reader\Document\Load</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Reader\Document\LoadCase\Document_40_Version_1_Reader.cpp">
+      <Filter>Файлы исходного кода\Reader\Document\LoadCase</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Reader\Document\Restraint\Document_30_Version_1_Reader.cpp">
+      <Filter>Файлы исходного кода\Reader\Document\Restraint</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

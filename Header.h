@@ -24,6 +24,10 @@
 
 #include "Classes/Instance/Instance.h"
 #include "Classes/Instance/Node.h"
+#include "Classes/Instance/Member.h"
+#include "Classes/Instance/Restraint.h"
+#include "Classes/Instance/Load.h"
+#include "Classes/Instance/LoadCase.h"
 
 #include "Classes/Model/Model.h"
 
@@ -34,4 +38,8 @@
 #include "Classes/Reader/File/File_Version_1_Reader.h"
 #include "Classes/Reader/Document/DocumentReader.h"
 #include "Classes/Reader/Document/Node/Document_10_Version_1_Reader.h"
+#include "Classes/Reader/Document/Member/Document_20_Version_1_Reader.h"
+#include "Classes/Reader/Document/Restraint/Document_30_Version_1_Reader.h"
+#include "Classes/Reader/Document/LoadCase/Document_40_Version_1_Reader.h"
+#include "Classes/Reader/Document/Load/Document_50_Version_1_Reader.h"
 #include "Classes/Reader/ReaderFactory.h"

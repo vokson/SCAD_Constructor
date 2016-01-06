@@ -1,18 +1,28 @@
-﻿Сборка начата 05.01.2016 9:34:21.
+﻿Сборка начата 06.01.2016 15:35:09.
      1>Проект "D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\SCAD_Constructor.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         D:\Microsoft Visual Studio 9.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc90.pdb" /Gd /TP /analyze- /errorReport:prompt Classes\Reader\Document\Node\Document_10_Version_1_Reader.cpp
-         Document_10_Version_1_Reader.cpp
+         D:\Microsoft Visual Studio 9.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc90.pdb" /Gd /TP /analyze- /errorReport:prompt Classes\Model\Model.cpp
+         Model.cpp
      1>D:\WinDDK\INC\mfc42\afx.inl(274): warning C4244: 'return' : conversion from 'const time_t' to 'LONG_PTR', possible loss of data
      1>D:\WinDDK\INC\mfc42\afx.inl(276): warning C4244: 'return' : conversion from 'const time_t' to 'LONG_PTR', possible loss of data
      1>D:\WinDDK\INC\mfc42\afx.inl(280): warning C4244: 'return' : conversion from 'const time_t' to 'LONG_PTR', possible loss of data
      1>D:\WinDDK\INC\mfc42\afx.inl(284): warning C4244: 'return' : conversion from 'const time_t' to 'LONG_PTR', possible loss of data
+     1>Classes\Model\Model.cpp(154): warning C4244: 'argument' : conversion from 'unsigned short' to 'BYTE', possible loss of data
+     1>Classes\Model\Model.cpp(154): warning C4244: 'argument' : conversion from 'unsigned short' to 'BYTE', possible loss of data
        Link:
          D:\Microsoft Visual Studio 9.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\Release\SCAD_Constructor.exe" /INCREMENTAL:NO /NOLOGO /MANIFEST /ManifestFile:"Release\SCAD_Constructor.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\Release\SCAD_Constructor.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Microsoft Visual Studio 14.0\AlexProjects\SCAD_Constructor\Release\SCAD_Constructor.lib" /MACHINE:X86 Release\SCAD_Constructor.res
+         Release\Load.obj
+         Release\LoadCase.obj
+         Release\Member.obj
          Release\Node.obj
+         Release\Restraint.obj
          Release\Model.obj
          Release\DocumentReader.obj
+         Release\Document_40_Version_1_Reader.obj
+         Release\Document_50_Version_1_Reader.obj
+         Release\Document_20_Version_1_Reader.obj
          Release\Document_10_Version_1_Reader.obj
+         Release\Document_30_Version_1_Reader.obj
          Release\FileReader.obj
          Release\File_Version_1_Reader.obj
          Release\ReaderFactory.obj
@@ -28,4 +38,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:04.50
+Затраченное время: 00:00:05.49

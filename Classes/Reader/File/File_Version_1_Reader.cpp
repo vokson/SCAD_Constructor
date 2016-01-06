@@ -24,6 +24,9 @@ void File_Version_1_Reader::read(std::ifstream &f, unsigned int address, int cou
 * @param u_int address Start address of docs' description
 */
 void File_Version_1_Reader::readAllDocumentsDescription(std::ifstream &f, unsigned int address) {
+	
+	std::clog << std::endl << Timer::get() << "   DOCUMENTS' DESCRIPTION" << std::endl;
+
 	// Goto start address
 	f.seekg(address);
 
@@ -39,6 +42,8 @@ void File_Version_1_Reader::readAllDocumentsDescription(std::ifstream &f, unsign
 		if (doc.number > 0) {
 			// Document isn't final
 			this->documents.push_back(doc);
+
+			std::clog << "   DOC " << doc.number << "[" << doc.version << "]  address = " << doc.address << ", bytes' count = " << doc.count << std::endl;
 		}
 		else {
 			// Document is final
@@ -58,13 +63,10 @@ docDescription File_Version_1_Reader::readSingleDocumentDescription(std::ifstrea
 
 	docDescription doc;
 
-	//std::clog << "Offset = " << f.tellg() << std::endl;
-
 	// Read doc number
 	f.read((char *)&doc.number, sizeof(unsigned short));
 
 	if (doc.number > 0) {
-
 		// Apply properties
 		f.read((char *)&doc.version, sizeof(unsigned short));
 		f.read((char *)&doc.address, sizeof(unsigned int));
@@ -80,15 +82,15 @@ docDescription File_Version_1_Reader::readSingleDocumentDescription(std::ifstrea
 */
 void File_Version_1_Reader::readAllDocumentsBody(std::ifstream &f) {
 
-	std::clog << std::endl << Timer::get() << "   DOCUMENTS' DESCRIPTION" << std::endl;
-
 	while (!this->documents.empty())
 	{
+		
+
 		// Create new document description
 		docDescription doc = this->documents.back();
 
-		std::clog << "   DOC " << doc.number << "[" << doc.version << "]  address = " << doc.address << ", bytes' count = " << doc.count << std::endl;
-
+		std::clog << std::endl << Timer::get() << "   READ DOCUMENT " << doc.number << "[" << doc.version << "]"  << std::endl;
+		
 		// Read document
 		Reader *docReader = ReaderFactory::Get()->CreateDocumentReader(doc.number, doc.version);
 

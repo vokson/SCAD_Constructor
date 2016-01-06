@@ -1,29 +1,17 @@
 #pragma once
-#include <string>
-#include <vector>
 
-class LoadCase {
+class LoadCase : public Instance {
+protected:
+	/* Abstract fucntion to make class polymorphous */
+	void abstractFunction();
+
+
 public:
-	int id; /* Номер узла */
-	std::string name; /* Имя узла */
+	unsigned short id; /* Номер загружения */
+	std::string name; /* Имя загружения */
 	std::string type; /* Параметры загружения */
 	std::vector <double> masses; /* Массив коэффициентов для матрицы масс */
-	int massCount;
-
-	/* Default constructor*/
-	LoadCase(int id, std::string name, std::string type) {
-		this->id = id;
-		this->name = name;
-		this->type = type;
-		this->massCount = 0;
-	}
 
 	/* Mass Matrix Constructor*/
-	LoadCase(int id, std::string name, std::string type, std::vector <double> masses) {
-		this->id = id;
-		this->name = name;
-		this->type = type;
-		this->masses = masses;
-		this->massCount = masses.size()-1;
-	}
+	LoadCase(unsigned short id, std::string name, std::string type, std::vector <double> masses);
 };

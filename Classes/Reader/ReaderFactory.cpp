@@ -8,6 +8,10 @@ Register the types of Reader here.
 ReaderFactory::ReaderFactory()
 {
 	Register("Document10_1", &Document_10_Version_1_Reader::Create);
+	Register("Document20_1", &Document_20_Version_1_Reader::Create);
+	Register("Document30_1", &Document_30_Version_1_Reader::Create);
+	Register("Document40_1", &Document_40_Version_1_Reader::Create);
+	Register("Document50_1", &Document_50_Version_1_Reader::Create);
 	Register("File_1", &File_Version_1_Reader::Create);
 }
 

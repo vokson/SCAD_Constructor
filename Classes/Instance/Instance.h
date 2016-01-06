@@ -1,7 +1,7 @@
 #pragma once
 
 class Instance {
-public:
+protected:
 	virtual void abstractFunction() = 0;
 };
 

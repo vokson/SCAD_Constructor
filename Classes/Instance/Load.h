@@ -1,23 +1,17 @@
 #pragma once
-#include <vector>
 
-class Load {
+class Load : public Instance {
+protected:
+	/* Abstract fucntion to make class polymorphous */
+	void abstractFunction();
+
 public:
-	int loadCase; /* Номер загружения */
-	int loadType; /* Тип нагрузки */
-	int loadDirection; /* Направление нагрузки */
-	int number; /* Номер узла или элемента, к которым приложена нагрузка*/
+	unsigned short loadCase; /* Номер загружения */
+	unsigned short loadType; /* Тип нагрузки */
+	unsigned short loadDirection; /* Направление нагрузки */
+	unsigned int number; /* Номер узла или элемента, к которым приложена нагрузка*/
 	std::vector <double> data; /* Массив значений нагрузок */
-	int dataCount; /* Кол-во элементов в data */
 
 	/* Default constructor*/
-	Load(int loadCase, int number, int loadType, int loadDirection, std::vector <double> data) {
-		this->loadCase = loadCase;
-		this->number = number;
-		this->loadType = loadType;
-		this->loadDirection = loadDirection;
-		
-		this->data = data;
-		this->dataCount = data.size();
-	}
+	Load(unsigned short loadCase, unsigned int number, unsigned short loadType, unsigned short loadDirection, std::vector <double> data);
 };

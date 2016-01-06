@@ -18,7 +18,7 @@ bool DocumentReader::isDocumentCorrect(std::ifstream &f, unsigned short correctN
 /* Read document */
 void  DocumentReader::read(std::ifstream &f, unsigned int address, int count) {
 	f.seekg(address);
-	std::clog << std::endl << Timer::get() << "   READ DOCUMENT " << this->number << "[" << this->version<< "]  '" << this->name << "'" << std::endl;
+	
 
 	// Check document header
 	bool isDocCorrect = this->isDocumentCorrect(f, this->number, this->version);
